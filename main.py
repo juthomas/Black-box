@@ -86,6 +86,10 @@ def main():
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         draw_model(vertices, faces)
         # draw_text("Votre texte ici", font, 10, 20)
+        glColor3f(0, 1, 0)  # Rouge = 0, Vert = 0, Bleu = 1
+        glWindowPos2d(10, display[1] - 20)
+        for char in "JUJU Mobile":
+            glutBitmapCharacter(GLUT_BITMAP_9_BY_15, ord(char))
         pygame.display.flip()
         pygame.time.wait(10)
 
