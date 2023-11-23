@@ -78,6 +78,11 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE or event.key == pygame.K_q:
+                    pygame.quit()
+                    quit()
+
         glTranslatef(pivot_x, pivot_y, pivot_z)
         glRotatef(2, 0, 0, 1)
         glTranslatef(-pivot_x, -pivot_y, -pivot_z)
