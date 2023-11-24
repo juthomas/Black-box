@@ -68,6 +68,7 @@ def main():
     glEnable(GL_DEPTH_TEST)
     glDepthFunc(GL_LESS)
     vertices, faces = load_obj('VoitureSTLv4.obj')
+    glutInit()
     # setup_lighting()
 
     pygame.font.init()
